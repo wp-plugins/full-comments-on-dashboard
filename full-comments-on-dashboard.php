@@ -2,12 +2,12 @@
 /*
 Plugin Name: Full Comments On Dashboard
 Description: Show full comments in the Recent Comments box on the admin dashboard.
-Version: 1.0
+Version: 1.0.1
 Author: scribu
 Author URI: http://scribu.net/
-Plugin URI: http://scribu.net/projects/full-comments-on-dashboard.html
+Plugin URI: http://scribu.net/wordpress/full-comments-on-dashboard
 
-Copyright (C) 2008 scribu.net (scribu AT gmail DOT com)
+Copyright (C) 2009 scribu.net (scribu AT gmail DOT com)
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -23,10 +23,13 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-add_filter('get_comment_excerpt', 'full_comments_on_dashboard');
+add_filter('comment_excerpt', 'full_comments_on_dashboard');
 function full_comments_on_dashboard($excerpt) {
 	global $comment;
-	$content = strip_tags($comment->comment_content);
+
+	$content = wpautop($comment->comment_content);
+	$content = substr($content, 3, strlen($content) - 4);	// Remove first <p> and last </p>
+	$content = str_replace('<p>', '<p style="display:block">', $content);
 
 	return is_admin() ? $content : $excerpt;
 }
