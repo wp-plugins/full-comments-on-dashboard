@@ -3,7 +3,7 @@ Contributors: scribu
 Donate link: http://scribu.net/wordpress
 Tags: comments, dashboard
 Requires at least: 2.7
-Tested up to: 2.8-bleeding
+Tested up to: 2.8
 Stable tag: trunk
 
 Show full comments in the Recent Comments box on the admin dashboard.
