@@ -21,3 +21,12 @@ The plugin can be installed in 2 easy steps:
 1. Unzip "Custom Field Images" archive and put the folder into your plugins folder (/wp-content/plugins/).
 1. Activate the plugin from the Plugins menu.
 1. Enjoy. :)
+
+== Changelog ==
+
+= 1.0.3 =
+* WP 2.8 compatibility
+
+= 1.0 =
+* initial release
+* [more info](http://scribu.net/wordpress/full-comments-on-dashboard/fcod-1-0.html)
