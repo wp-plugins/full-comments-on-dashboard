@@ -23,7 +23,6 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-add_filter('comment_excerpt', 'full_comments_on_dashboard');
 function full_comments_on_dashboard($excerpt) {
 	global $comment;
 
@@ -36,3 +35,4 @@ function full_comments_on_dashboard($excerpt) {
 
 	return $content;
 }
+add_filter('comment_excerpt', 'full_comments_on_dashboard');
