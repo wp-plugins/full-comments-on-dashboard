@@ -1,10 +1,11 @@
 === Full Comments On Dashboard ===
 Contributors: scribu
-Donate link: http://scribu.net/wordpress
 Tags: comments, dashboard
 Requires at least: 2.7
 Tested up to: 3.0
 Stable tag: trunk
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Show full comments in the Recent Comments box on the admin dashboard.
 
